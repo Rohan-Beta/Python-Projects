@@ -7,7 +7,7 @@
 # for install pyttsx3 - pip install pyttsx3
 # for install speech_recognition - pip install SpeechRecognition
 
-# to get openai.api_key
+# to get openai.api_key or secret key
 
 # Step 1. visit (https://platform.openai.com/account/api-keys) this website
 # Step 2. sign up
