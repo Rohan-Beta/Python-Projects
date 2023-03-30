@@ -10,6 +10,7 @@
 
 import requests # this library helps to collect all the inforantion at any location
 import json # this library helps to convert it into dictionary
+import win32com.client as wincom # helps to speak the text
 
 city = input("Enter your city: ")
 
@@ -24,5 +25,13 @@ print(r.text) # r.text type is String
 
 wDic = json.loads(r.text) # convert into dictionary
 
-print(f"weather of {city}: ")
-print(wDic["current"]["temp_c"]) # get key and print the value
+temp = wDic["current"]["temp_c"] # get key and print the value
+
+print(f"current weather of {city} is {temp}")
+
+# this part is to speak the text or ouput part
+
+speak = wincom.Dispatch("SAPI.SpVoice") # choose voice
+
+text = f"current weather of {city} is {temp}"
+speak.Speak(text) # speak the ouput
