@@ -94,6 +94,7 @@ def main():
                         source.pause_threshold = 1
                         audio = recognition.listen(source , phrase_time_limit= None , timeout= None)
                         
+                        # create a file and store user voice command
                         with open(file , "wb") as f:
                             f.write(audio.get_wav_data())
                     
