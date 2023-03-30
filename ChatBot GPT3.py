@@ -1,4 +1,5 @@
 # create chatBot using GPT3 API
+# it is also used as voice assistance
 
 # command line in windows
 
