@@ -1,5 +1,6 @@
 # merge pdf
 
+# to perform any task in pdf we use this library
 import PyPDF2 # this library is used to merge pdf
 
 pdfFiles = ["sample.pdf" , "file-sample.pdf"] # store two pdf files
