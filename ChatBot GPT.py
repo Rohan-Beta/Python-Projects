@@ -1,4 +1,4 @@
-# create chatBot using GPT3 API
+# create chatBot using GPT API
 # it is also used as voice assistance
 
 # command line in windows
@@ -44,8 +44,8 @@ def voiceToText(file): # file store text
 
 def responseAPI(promt): # promt use as generate response
     
-    # create GPT3 API completion method to generate response
-    # given in GPT3 Api documentation
+    # create GPT API completion method to generate response
+    # given in GPT Api documentation
     response = openai.Completion.create (
         
         engine = "text-davinci-003",
