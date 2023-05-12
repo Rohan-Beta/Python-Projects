@@ -86,10 +86,9 @@ def responseAPI(promt): # promt use as generate response
 # logic of how python run this script
 
 def main():
-    i = 1
         
     # this loop allow our program to listen then answer and then continue listening
-    while (i <= 1):
+    while True:
         
         # wait for user to say "hello"
         print("Say 'jarvis' to start recording audio")
