@@ -7,8 +7,14 @@ import datetime
 import webbrowser
 import pywhatkit
 
+# to get current time
+time = datetime.datetime.now()
+
+t1 = time.strftime("%y-%m-%d")
+t2 = time.strftime("%H:%M:%S")
+
 # set open AI key
-openai.api_key = "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" # secret key
+openai.api_key = "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" # secret key
 
 engine = pyttsx3.init("sapi5") # microsoft voice api
 
@@ -76,13 +82,14 @@ def responseAPI(promt): # promt use as generate response
     )
     # return generated response from gpt3 API
     return response["choices"][0]["text"]
-    
+
 # logic of how python run this script
 
 def main():
+    i = 1
         
     # this loop allow our program to listen then answer and then continue listening
-    while True:
+    while (i <= 1):
         
         # wait for user to say "hello"
         print("Say 'jarvis' to start recording audio")
@@ -126,11 +133,15 @@ def main():
                         speak("playing" + song)
                         pywhatkit.playonyt(song)
                         
-                    elif("what is the time" in user):
-                        time = datetime.datetime.now()
+                    elif("open microsoft 365" in user or "open word" in user or "open excel" in user or "open powerpoint" in user
+                          or "open outlook" in user or "open drive" in user or "open teams" in user or "open 1 note" in user):
                         
-                        print(time)
-                        speak(time)
+                        speak("opening")
+                        webbrowser.open("https://www.office.com/?auth=1")
+                        
+                    elif("time in kolkata" in user):
+                        speak(f"date is {t1}")
+                        speak(f"and time is: {t2}")
                                                 
                     else :
                         if user:
